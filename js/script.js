@@ -30,7 +30,12 @@ console.log(userKm, userAge);
 //! VALIDAZIONE
 if(isNaN(userAge) || isNaN(userKm)){
   valid = false;
-  errorMessage = 'Campi inseriti non validi. Prova ad inserire dei numeri';
+  errorMessage = 'Campi inseriti non validi. Prova ad inserire dei numeri \n';
+}
+
+if(userKm < 0 || userAge <= 1){
+  valid = false;
+  errorMessage += 'I campi devono essere validi "Numeri positivi"';
 }
 
 if(!valid){
